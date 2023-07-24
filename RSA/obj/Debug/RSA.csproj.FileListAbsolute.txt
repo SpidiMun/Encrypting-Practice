@@ -1,0 +1,15 @@
+C:\RepositoryForCSharp\RSA\bin\Debug\RSA.exe.config
+C:\RepositoryForCSharp\RSA\bin\Debug\RSA.exe
+C:\RepositoryForCSharp\RSA\bin\Debug\RSA.pdb
+C:\RepositoryForCSharp\RSA\obj\Debug\RSA.csproj.AssemblyReference.cache
+C:\RepositoryForCSharp\RSA\obj\Debug\MainWindow.g.cs
+C:\RepositoryForCSharp\RSA\obj\Debug\App.g.cs
+C:\RepositoryForCSharp\RSA\obj\Debug\RSA_MarkupCompile.cache
+C:\RepositoryForCSharp\RSA\obj\Debug\RSA_MarkupCompile.lref
+C:\RepositoryForCSharp\RSA\obj\Debug\MainWindow.baml
+C:\RepositoryForCSharp\RSA\obj\Debug\RSA.g.resources
+C:\RepositoryForCSharp\RSA\obj\Debug\RSA.Properties.Resources.resources
+C:\RepositoryForCSharp\RSA\obj\Debug\RSA.csproj.GenerateResource.cache
+C:\RepositoryForCSharp\RSA\obj\Debug\RSA.csproj.CoreCompileInputs.cache
+C:\RepositoryForCSharp\RSA\obj\Debug\RSA.exe
+C:\RepositoryForCSharp\RSA\obj\Debug\RSA.pdb

@@ -1,0 +1,184 @@
+﻿<Window x:Class="RSA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RSA"
+        mc:Ignorable="d"
+        Title="RSA Encryption" 
+        SnapsToDevicePixels="True"
+        Height="Auto" Width="Auto" 
+        MinHeight="600" MinWidth="700"
+        FontSize="30" >
+
+    <Window.Resources>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="#FF464646"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border x:Name="TextBoxBorder"
+                                    Background="#FFFAFAFA" 
+                                    BorderBrush="#FF8C8C8C" 
+                                    BorderThickness="1" 
+                                    CornerRadius="3" Opacity="1">
+                                <Grid>
+                                    <ScrollViewer x:Name="PART_ContentHost" 
+                                                  BorderThickness="0" IsTabStop="False" 
+                                                  Margin="0" Padding="{TemplateBinding Padding}">
+                                    </ScrollViewer>
+                                    <Border Margin="0,0,0,-1" 
+                                            BorderBrush="#66969696" 
+                                            BorderThickness="1,1,1,1" 
+                                            CornerRadius="1"/>
+                                    <Border Margin="0,0,0,-1" 
+                                            BorderBrush="#19696969" 
+                                            BorderThickness="2,2,2,2" 
+                                            CornerRadius="1"/>
+                                    <Border x:Name="Outer"/>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="TextBoxBorder" Property="Background" Value="WhiteSmoke"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="TextBoxBorder" Property="Background" Value="#FFF0F0F0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+            
+    </Window.Resources>
+
+    <Grid x:Name="mainGrid" 
+          SnapsToDevicePixels="True">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" MinWidth="400"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" MinHeight="180"/>
+            <RowDefinition Height="0.5*" MinHeight="90"/>
+            <RowDefinition Height="*" MinHeight="240"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="firstRowGrid" 
+              Grid.Row="0" 
+              SnapsToDevicePixels="True">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0"
+                   Content="Число p"
+                   VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                   Margin="10,15"
+                   FontSize="28" FontFamily="Times New Roman" FontStyle="Italic"/>
+            
+            <Label Grid.Row="0" Grid.Column="1"
+                   Content="Число q"
+                   VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                   Margin="10,15"
+                   FontSize="28" FontFamily="Times New Roman" FontStyle="Italic"/>
+
+            <TextBox x:Name="pTextBox"
+                Grid.Row="1" Grid.Column="0"
+                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Right"
+                Margin="20,15"/>
+
+            <TextBox x:Name="qTextBox"
+                Grid.Row="1" Grid.Column="1"
+                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Right"
+                Margin="20,15"/>
+
+        </Grid>
+
+        <Button x:Name="encodeButton" 
+                Grid.Row="1" Grid.Column="0"
+                Content="Зашифровать" 
+                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                Margin="100,15"
+                Click="EncodeButton_Click"/>
+
+        <Grid Grid.Row="2" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0"
+                   Content="Оригинальное сообщение"
+                   VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                   Margin="10,15"
+                   FontSize="22" FontFamily="Times New Roman" FontStyle="Italic"/>
+
+            <TextBox x:Name="originalTextBox"
+                 Grid.Row="0" Grid.Column="1"
+                 Margin="10"
+                 VerticalScrollBarVisibility="Auto"
+                 TextWrapping="Wrap"/>
+
+            <Label Grid.Row="1" Grid.Column="0"
+                   Content="Зашифрованное сообщение"
+                   VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                   Margin="10,15"
+                   FontSize="22" FontFamily="Times New Roman" FontStyle="Italic"/>
+
+            <TextBox x:Name="encodingTextBox"
+                 Grid.Row="1" Grid.Column="1"
+                 Margin="10"
+                 TextWrapping="Wrap"
+                 IsReadOnly="True"/>
+
+            <Label Grid.Row="2" Grid.Column="0"
+                   Content="Дешифрованное сообщение"
+                   VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                   Margin="10,15"
+                   FontSize="22" FontFamily="Times New Roman" FontStyle="Italic"/>
+
+            <TextBox x:Name="decodingTextBox"
+                 Grid.Row="2" Grid.Column="1"
+                 Margin="10"
+                 VerticalScrollBarVisibility="Auto"
+                 TextWrapping="Wrap"
+                 IsReadOnly="True"/>
+
+        </Grid>
+
+        <StatusBar Grid.Row="3" Grid.Column="0">
+            <StatusBarItem x:Name="errorStatusBar"
+                           VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                           VerticalContentAlignment="Top" HorizontalContentAlignment="Left"
+                           Margin="5"/>
+        </StatusBar>
+
+    </Grid>
+    
+</Window>
