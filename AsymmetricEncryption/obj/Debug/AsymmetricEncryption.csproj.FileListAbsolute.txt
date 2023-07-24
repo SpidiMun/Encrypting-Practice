@@ -1,0 +1,15 @@
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\AsymmetricEncryption.csproj.AssemblyReference.cache
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\MainWindow.g.cs
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\App.g.cs
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\AsymmetricEncryption_MarkupCompile.cache
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\AsymmetricEncryption_MarkupCompile.lref
+C:\RepositoryForCSharp\AsymmetricEncryption\bin\Debug\AsymmetricEncryption.exe.config
+C:\RepositoryForCSharp\AsymmetricEncryption\bin\Debug\AsymmetricEncryption.exe
+C:\RepositoryForCSharp\AsymmetricEncryption\bin\Debug\AsymmetricEncryption.pdb
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\MainWindow.baml
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\AsymmetricEncryption.g.resources
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\AsymmetricEncryption.Properties.Resources.resources
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\AsymmetricEncryption.csproj.GenerateResource.cache
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\AsymmetricEncryption.csproj.CoreCompileInputs.cache
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\AsymmetricEncryption.exe
+C:\RepositoryForCSharp\AsymmetricEncryption\obj\Debug\AsymmetricEncryption.pdb
