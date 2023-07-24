@@ -1,0 +1,32 @@
+﻿<Window x:Class="Compression.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Compression"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="originTextBox" Grid.Row="0" Grid.Column="0" Margin="30" VerticalContentAlignment="Center"/>
+        <Button Grid.Row="0" Grid.Column="1" Content="Обзор файла" Margin="10,45" FontSize="20" Click="ButtonCheck1_Click"/>
+        <Button Grid.Row="0" Grid.Column="2" Content="Выбрать файл" Margin="10,45" FontSize="20" Click="ButtonSearch_Click"/>
+        <TextBox x:Name="huffmanTextBox" Grid.Row="1" Grid.Column="0" Margin="30" VerticalContentAlignment="Center"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="Обзор файла" Margin="10,45" FontSize="20" Click="ButtonCheck2_Click"/>
+        <Button Grid.Row="1" Grid.Column="2" Content="Сжатие Хаффмана" Margin="10,45" FontSize="20" Click="ButtonHuffman_Click"/>
+        <TextBox x:Name="arithmeticTextBox" Grid.Row="2" Grid.Column="0" Margin="30" VerticalContentAlignment="Center"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="Обзор файла" Margin="10,45" FontSize="20" Click="ButtonCheck3_Click"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="Сжатие кодировкой" Margin="10,45" FontSize="20" Click="ButtonArithmetic_Click"/>
+    </Grid>
+</Window>

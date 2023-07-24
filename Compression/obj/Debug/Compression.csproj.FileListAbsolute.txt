@@ -1,0 +1,15 @@
+C:\RepositoryForCSharp\Compression\obj\Debug\Compression.csproj.AssemblyReference.cache
+C:\RepositoryForCSharp\Compression\obj\Debug\MainWindow.g.cs
+C:\RepositoryForCSharp\Compression\obj\Debug\App.g.cs
+C:\RepositoryForCSharp\Compression\obj\Debug\Compression_MarkupCompile.cache
+C:\RepositoryForCSharp\Compression\obj\Debug\Compression_MarkupCompile.lref
+C:\RepositoryForCSharp\Compression\bin\Debug\Compression.exe.config
+C:\RepositoryForCSharp\Compression\bin\Debug\Compression.exe
+C:\RepositoryForCSharp\Compression\bin\Debug\Compression.pdb
+C:\RepositoryForCSharp\Compression\obj\Debug\MainWindow.baml
+C:\RepositoryForCSharp\Compression\obj\Debug\Compression.g.resources
+C:\RepositoryForCSharp\Compression\obj\Debug\Compression.Properties.Resources.resources
+C:\RepositoryForCSharp\Compression\obj\Debug\Compression.csproj.GenerateResource.cache
+C:\RepositoryForCSharp\Compression\obj\Debug\Compression.csproj.CoreCompileInputs.cache
+C:\RepositoryForCSharp\Compression\obj\Debug\Compression.exe
+C:\RepositoryForCSharp\Compression\obj\Debug\Compression.pdb
